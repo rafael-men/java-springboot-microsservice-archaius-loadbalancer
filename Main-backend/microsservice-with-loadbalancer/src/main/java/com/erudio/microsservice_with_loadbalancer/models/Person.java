@@ -1,19 +1,29 @@
 package com.erudio.microsservice_with_loadbalancer.models;
 
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "person")
 public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "first_name",nullable = false)
     private String firstName;
 
+    @Column(name = "last_name",nullable = false)
     private String lastName;
 
+    @Column(name = "address",nullable = false)
     private String address;
 
+    @Column(name = "gender",nullable = false)
     private String gender;
 
     public Person(Long id, String gender, String lastName, String firstName, String address) {
