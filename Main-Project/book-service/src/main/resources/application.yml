@@ -1,12 +1,11 @@
 server:
-  port: 8000
-
+  port: 8100
 spring:
   application:
-    name: cambio-service
+    name: book-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cambio_db?useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/book_db?useTimezone=true&serverTimezone=UTC
     username: root
     password: root123
   jpa:
@@ -18,8 +17,9 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
   flyway:
     enabled: true
-    url: jdbc:mysql://localhost:3306/cambio_db?useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/book_db?useTimezone=true&serverTimezone=UTC
     user: root
     password: root123
     schemas:
-      - cambio_db
+      - book_db
+
