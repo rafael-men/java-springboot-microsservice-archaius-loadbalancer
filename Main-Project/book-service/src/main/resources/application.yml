@@ -1,14 +1,23 @@
 server:
   port: 8100
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html  # Esta é a URL para acessar o Swagger UI
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
 resilience4j:
   retry:
     instances:
       foo-bar:
         max-attempts: 5
+
 spring:
   application:
     name: book-service
@@ -35,4 +44,3 @@ spring:
     password: root123
     schemas:
       - book_db
-
