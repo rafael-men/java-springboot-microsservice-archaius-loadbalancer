@@ -27,3 +27,7 @@ spring:
     password: root123
     schemas:
       - cambio_db
+springdoc:
+  show-actuator: true
+  api-docs:
+    path: book-service/v3/api-docs
