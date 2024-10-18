@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  naming-server:
+    image: rafaelmen/naming-server:0.0.1-snapshot
+    ports:
+      - 8761:8761
+    networks:
+      - rafa-network
+  api-gateway:
+    image: rafaelmen/api-gateway:0.0.1-snapshot
+    ports:
+      - 8765:8765
+    networks:
+      - rafa-network
+networks:
+  rafa-network:
+    driver: bridge
